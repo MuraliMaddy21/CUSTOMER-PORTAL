@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class='main-container'>
+
+        <div class='container'>
+
+            <div class='left-sidebar'>
+                <h2>Dashboard</h2>
+                  <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/invoice'>INVOICE</a>
+
+                  </div>
+                <div>
+  <a class='left-sidebar-links' href='http://localhost:4200/dashboard'>PROFILE</a>
+
+                </div>
+                  <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/purord'>PURCHASE-ORDER</a>
+                </div>
+                
+                <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/pa'>PAYMENT-AGING</a>
+                </div>
+
+                <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/quotation'>QUOTATION</a>
+                </div>
+
+                <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/credit'>CREDIT-DEBIT</a>
+                </div>
+              
+                <div>
+                    <a class='left-sidebar-links' href='http://localhost:4200/gr'>GOODS RECEIPT</a>
+                </div>
+                
+
+
+            </div>
+
+            <div class='dashboard'>
+                <H2 align="center">CUSTOMER PORTAL- DELIVERY LIST</H2>
+
+               
+
+              
+
+                <div class='rightbar'>
+                    <br>
+                    <br>
+                    
+                    <table>
+                        <th>SALES DOCUMENT</th>
+                        <th>CREATED ON</th>
+                        <th>BILLING TYPE </th>
+                        <th>CURRENCY </th>
+                        
+
+                    <tr style="height:200px" *ngFor="let entries of this.items">
+                        <td><h4>{{entries.VBELN}}</h4></td>
+                        <td><h4>{{entries.ERDAT}}</h4></td>
+                        <td><h4>{{entries.LFART}}</h4></td>
+                        <td><h4>{{entries.MATNR}}</h4></td>
+                        
+                    </tr>
+                </table>
+                            
+                        
+                 
+                    
+                    
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
