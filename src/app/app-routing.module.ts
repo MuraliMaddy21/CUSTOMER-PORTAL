@@ -14,34 +14,34 @@ import { SalesOrderComponent } from './sales-order/sales-order.component';
 const routes: Routes = [
 
   {
-    path:'',component:LoginComponent
+    path:'',component:LoginComponent,title:'Login-Page'
   },
   {
-    path:'dashboard',component:DashboardComponent
+    path:'dashboard',component:DashboardComponent,title:'Dashboard'
   },
   {
-    path:'iq',component:InquiryComponent
+    path:'iq',component:InquiryComponent,title:'Inquiry'
   },
   {
-    path:'salord',component:SalesOrderComponent
+    path:'salord',component:SalesOrderComponent,title:'Sale-Order'
   },
   {
-    path:'credit',component:CreditComponent
+    path:'credit',component:CreditComponent,title:'Credit'
   },
   {
-    path:'debit',component:DebitComponent
+    path:'debit',component:DebitComponent,title:'Debit'
   },
   {
-    path:'dllist',component:DeliveryListComponent
+    path:'dllist',component:DeliveryListComponent,title:'Delivery-List'
   },
   {
-    path:'invoice',component:InvoiceComponent
+    path:'invoice',component:InvoiceComponent,title:'Invoice'
   },
   {
-    path:'pa',component:PaymentAgingComponent
+    path:'pa',component:PaymentAgingComponent,title:'Payment-Aging'
   },
   {
-  path:'**',component:ErrorPageComponent
+  path:'**',component:ErrorPageComponent,title:'Error-Page'
 }
 ];
 
