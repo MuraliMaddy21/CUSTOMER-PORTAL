@@ -229,4 +229,8 @@ input::placeholder{
     font-family: 'Poppins';
     letter-spacing: 1px;
 }
-
+.time
+{
+    margin-top: 0.5rem;
+    margin-left:42rem;
+}

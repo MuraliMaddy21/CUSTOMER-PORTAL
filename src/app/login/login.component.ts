@@ -26,16 +26,30 @@ export class LoginComponent implements OnInit {
 
   validate()
   {
+    if(this.customerid=='')
+  {
+    window.alert("Please enter Vendor-ID")
+  }
+  if(this.password=='')
+  {
+    window.alert("Please enter Password")
+  }
+
+   
    this.json={
     "customerid":this.customerid,
     "password":this.password
    }
+
+   
+ 
+  
    console.log(this.json)
    this.http.post('http://localhost:3030/cplogin',this.json,{responseType:'json'}).subscribe((response=>
    {
       this.result = response
       console.log(this.result)
-      console.log(this.result['Envelope']['Body']['ZFM_LOGIN_CP_MDResponse']['E_MESSAGE'].toString())
+      //console.log(this.result['Envelope']['Body']['ZFM_LOGIN_VP_MD.Response']['E_MESSAGE'].toString())
       this.status=this.result['Envelope']['Body']['ZFM_LOGIN_CP_MDResponse']['E_MESSAGE']
       if(this.status == 'S')
       {
@@ -48,6 +62,9 @@ export class LoginComponent implements OnInit {
       }
 
    }))
+   
+
+   
    
 
   }

@@ -7,7 +7,7 @@
 }
 
 body{
-    background: linear-gradient(to left,rgb(253, 250, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
+    background: linear-gradient(to left,rgb(253, 278, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
     
 }
 .WEL
@@ -230,3 +230,24 @@ input::placeholder{
     letter-spacing: 1px;
 }
 
+.rightbar{
+    border: solid;
+    border-width: 0.5rem;
+    border-color:black;
+    
+}
+
+.rightbar h4{
+    padding-left: 2rem;
+    margin-top: 2rem;
+}
+
+.rightbar h4:hover{
+    background-color: gold; 
+}
+
+.time
+{
+    margin-top: 0.5rem;
+    margin-left:42rem;
+}

@@ -23,7 +23,7 @@ const routes: Routes = [
     path:'iq',component:InquiryComponent,title:'Inquiry'
   },
   {
-    path:'salord',component:SalesOrderComponent,title:'Sale-Order'
+    path:'salord',component:SalesOrderComponent,title:'Sales-Order'
   },
   {
     path:'credit',component:CreditComponent,title:'Credit'

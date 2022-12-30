@@ -25,7 +25,7 @@
         </h1>
         <form>
             <div class="text-field">
-                <input type="text" [value]="customerid" name="customerid" (input)="customerid=($any($event.target).value)"  required>
+                <input type="number" [value]="customerid" name="customerid" (input)="customerid=($any($event.target).value)"  required>
                 <span></span>
                 <label>CUSTOMER-ID</label>
             </div>

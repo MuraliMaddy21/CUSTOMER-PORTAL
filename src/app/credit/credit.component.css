@@ -238,5 +238,9 @@ table, th, td {
     height: 20%;
     size: 2rem;
   }
-
+  .time
+  {
+      margin-top: 0.5rem;
+      margin-left:42rem;
+  }
 

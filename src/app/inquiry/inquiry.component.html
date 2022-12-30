@@ -56,7 +56,9 @@
             <div class='dashboard'>
                 <H2 align="center">CUSTOMER PORTAL- INQUIRY </H2>
 
-               
+                <div class="time">
+                    TIME:{{time}}
+                </div>
 
               
 
@@ -64,6 +66,30 @@
                     <br>
                     
                     <br>
+
+
+                    <table>
+                        <th>DOCUMENT DATE</th>
+                        <TH> Sales Document</TH>
+                        <th>VALID FROM</th>
+                        <th>VALID TO</th>
+                        <th>Requested delivery date</th>
+                        <th>DELIVERY STATUS </th>
+                       
+                        
+
+                    <tr style="height:200px" *ngFor="let entries of this.items">
+                        <td><h4>{{entries.AUDAT}}</h4></td>
+                        <td><h4>{{entries.VBELN}}</h4></td>
+
+                        <td><h4>{{entries.GUEBG}}</h4></td>
+                        <td><h4>{{entries.GUEEN}}</h4></td>
+                        <td><h4>{{entries.VDATU}}</h4></td>
+                        <td><h4>{{entries.AUTLF}}</h4></td>
+
+                        
+                    </tr>
+                </table>
                     
                     
                 </div>
