@@ -17,6 +17,9 @@ export class SalesOrderComponent implements OnInit {
 
   ngOnInit(): void {
 
+    let date:Date= new Date()
+    this.time=date;
+
     this.http.get('http://localhost:3030/getauth',{responseType:'json'}).subscribe((response)=>
     {
      console.log(response)
@@ -32,7 +35,7 @@ export class SalesOrderComponent implements OnInit {
     {
      console.log(response)
      this.result=response
-     this.items=this.result['Envelope']['Body']['ZFM_INVOICE_CP_MDResponse']['IT_INVOICE']['item']
+     this.items=this.result['Envelope']['Body']['ZFM_SALESORDER_CP_MDResponse']['E_SALESORDER']['item']
      console.log(this.items)
      
  

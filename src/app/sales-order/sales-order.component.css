@@ -64,7 +64,7 @@ body{
     box-shadow: .2px .2px 3px .2px rgb(157, 157, 157);
     padding:0px 0px 0px 22px;
     height: 42.8rem;
-    width: 16rem;
+    width: 15rem;
     gap: 52px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -74,7 +74,7 @@ body{
 .dashboard{
     border:2px solid transparent;
     box-shadow: .2px .2px 1px .2px gray;
-    height: 42.6rem;
+    height: 100;
     width: 90%;
     border-bottom-right-radius: 8px;
     border-top-right-radius: 8px;
@@ -229,8 +229,19 @@ input::placeholder{
     font-family: 'Poppins';
     letter-spacing: 1px;
 }
-.time
-{
-    margin-top: 0.5rem;
-    margin-left:42rem;
-}
+
+table, th, td {
+    border: 2px solid black;
+    border-collapse: collapse;
+    padding: 0.5rem;
+    width: auto;
+    height: 20%;
+    size: 2rem;
+  }
+
+ 
+  .time
+  {
+      margin-top: 0.5rem;
+      margin-left:42rem;
+  }

@@ -67,7 +67,35 @@
                     
                     <br>
                     
-                    
+                    <table>
+                        <th>SALES DOCUMENT NUMBER</th>
+                        <th>CREATION DATE</th>
+                        <th>NET PRICE</th>
+                        <TH>REQUESTED DATE</TH>
+                        <TH>VALID FROM</TH>
+                        <TH>VALID TO</TH>
+                        <TH>DOC STATUS</TH>
+                        <TH>SOLD TO</TH>
+                        <TH>MATERIAL</TH>
+                        
+
+                    <tr style="height:200px" *ngFor="let entries of this.items">
+                        <td><h4>{{entries.SD_DOC}}</h4></td>
+                        <td><h4>{{entries.CREATION_DATE}}</h4></td>
+                        <td><h4>{{entries.NET_PRICE}}</h4></td>
+                        <td><h4>{{entries.REQ_DATE}}</h4></td>
+                        <td><h4>{{entries.VALID_FROM}}</h4></td>
+                        <td><h4>{{entries.VALID_TO}}</h4></td>
+                        <TD><H4>{{entries.DOC_STATUS}}</H4></TD>
+                        <TD><H4>{{entries.SOLD_TO}}</H4></TD>
+                        <TD><H4>{{entries.SHORT_TEXT}}</H4></TD>
+                        
+                    </tr>
+                </table>
+                            
+                        
+
+
                 </div>
 
 

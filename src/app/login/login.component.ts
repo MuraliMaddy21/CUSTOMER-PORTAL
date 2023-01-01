@@ -14,7 +14,7 @@ export class LoginComponent implements OnInit {
   json:any
   result:any
   status:any
- 
+ x:any
 
   constructor(private route:Router,private http:HttpClient) { }
 
@@ -67,6 +67,15 @@ export class LoginComponent implements OnInit {
    
    
 
+  }
+
+  myFunction()
+  {
+   this.x=document.getElementById("myInput");
+   if(this.x==="password")
+   {
+    
+   }
   }
 }
 
