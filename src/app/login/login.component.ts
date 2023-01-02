@@ -71,13 +71,16 @@ export class LoginComponent implements OnInit {
 
   myFunction()
   {
-   this.x=document.getElementById("myInput");
-   if(this.x==="password")
-   {
-    
-   }
+    this.x = document.getElementById("myInput");
+    if (this.x.type === "password") {
+      this.x.type = "text";
+    } else {
+      this.x.type = "password";
+    }
   }
 }
+
+
 
       
   
