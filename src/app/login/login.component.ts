@@ -28,13 +28,13 @@ export class LoginComponent implements OnInit {
   {
   if(this.customerid=='' && this.password=="")
   {
-    window.alert("Please enter Vendor-ID and Password")
+    window.alert("Please enter CUSTOMER-ID and Password")
   }
   else if(this.customerid=='')
   {
     window.alert("Please enter Customer-Id")
   }
-  else if(this.customerid=='')
+  else if(this.password=='')
   {
     window.alert("Please enter Password")
   }
