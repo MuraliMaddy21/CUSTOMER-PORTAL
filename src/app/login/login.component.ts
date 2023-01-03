@@ -26,14 +26,20 @@ export class LoginComponent implements OnInit {
 
   validate()
   {
-    if(this.customerid=='')
+  if(this.customerid=='' && this.password=="")
   {
-    window.alert("Please enter Vendor-ID")
+    window.alert("Please enter Vendor-ID and Password")
   }
-  if(this.password=='')
+  else if(this.customerid=='')
+  {
+    window.alert("Please enter Customer-Id")
+  }
+  else if(this.customerid=='')
   {
     window.alert("Please enter Password")
   }
+  else
+  {
 
    
    this.json={
@@ -62,6 +68,7 @@ export class LoginComponent implements OnInit {
       }
 
    }))
+  }
    
 
    
