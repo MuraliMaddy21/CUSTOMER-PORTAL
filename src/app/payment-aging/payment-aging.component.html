@@ -70,7 +70,7 @@
                         <th>BILL DOCUMENT</th>
                         <th>POSTING DATE</th>
                         <th>CURRENCY </th>
-                        <th>POSTING DATE </th>
+                        <th>CLEARING DATE </th>
                         <TH>FISCAL YEAR</TH>
                         <TH>FISCAL PERIOD</TH>
                         <TH>AMOUNT</TH>
@@ -78,9 +78,9 @@
 
                     <tr style="height:200px" *ngFor="let entries of this.items">
                         <td><h4>{{entries.BILL_DOC}}</h4></td>
-                        <td><h4>{{entries.BLINE_DATE}}</h4></td>
-                        <td><h4>{{entries.CURRENCY}}</h4></td>
                         <td><h4>{{entries.PSTNG_DATE}}</h4></td>
+                        <td><h4>{{entries.CURRENCY}}</h4></td>
+                        <td><h4>{{entries.CLEAR_DATE}}</h4></td>
                         <td><h4>{{entries.FISC_YEAR}}</h4></td>
                         <td><h4>{{entries.FIS_PERIOD}}</h4></td>
                         <td><h4>{{entries.AMOUNT}}</h4></td>
