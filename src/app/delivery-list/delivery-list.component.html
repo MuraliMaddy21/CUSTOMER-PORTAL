@@ -17,7 +17,7 @@
             <div class='left-sidebar'>
                 <h2>Dashboard</h2>
                   <div>
-                    <a class='left-sidebar-links' href='http://localhost:4200/invoice'>INVOICE</a>
+                    <a class='left-sidebar-links' href='http://localhost:4200/invoice'>DELIVERY LIST</a>
 
                   </div>
                 <div>
@@ -33,7 +33,7 @@
                 </div>
 
                 <div>
-                    <a class='left-sidebar-links' href='http://localhost:4200/quotation'>QUOTATION</a>
+                    <a class='left-sidebar-links' href='http://localhost:4200/invoice'>INVOICE</a>
                 </div>
 
                 <div>
@@ -59,6 +59,12 @@
                 <div class="time">
                     TIME:{{time}}
                 </div>
+
+                
+                <div class="shutdown">
+                    <button class="log"  (click)="shutdown()">LOGOUT👋</button>
+                </div>
+               
               
 
                 <div class='rightbar'>
@@ -67,16 +73,20 @@
                     
                     <table>
                         <th>SALES DOCUMENT</th>
+                        <th>MATERIAL </th>
                         <th>CREATED ON</th>
+                        <th>CREATION TIME</th>
                         <th>BILLING TYPE </th>
-                        <th>CURRENCY </th>
+                        
                         
 
                     <tr style="height:200px" *ngFor="let entries of this.items">
-                        <td><h4>{{entries.VBELN}}</h4></td>
-                        <td><h4>{{entries.ERDAT}}</h4></td>
+                        <td><h4>{{entries.VBELN | number}}</h4></td>
+                        <td><h4>{{entries.MATNR|number}}</h4></td>
+                        <td><h4>{{entries.ERDAT |  date: 'dd/MM/yyyy'}}</h4></td>
+                        <td><h4>{{entries.ERZET}}</h4></td>
                         <td><h4>{{entries.LFART}}</h4></td>
-                        <td><h4>{{entries.MATNR}}</h4></td>
+                       
                         
                     </tr>
                 </table>

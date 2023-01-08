@@ -86,8 +86,7 @@ body{
     padding: 13px 2px 17px 22px;
     margin: 0px 0px 0px -22px;
     letter-spacing: -2px;
-    border-radius: none;
-    background:white;
+   background-color: #0C7ECF;
 }
 
 .dashboard h2{
@@ -95,8 +94,7 @@ body{
     margin: 0px 0px 0px -21px;
     letter-spacing: 2px;
     border-radius: none;
-    background: linear-gradient(to left,transparent,rgb(241, 242, 255),transparent,rgb(249, 250, 255));
-    box-shadow: .2px .2px 2px .2px rgb(196, 201, 245);
+    background-color: #0C7ECF;
 }
 
 .left-sidebar div{
@@ -243,7 +241,7 @@ input::placeholder{
 }
 
 .rightbar h4:hover{
-    background-color: gold; 
+    background-color: silver; 
 }
 
 .time
@@ -251,3 +249,22 @@ input::placeholder{
     margin-top: 0.5rem;
     margin-left:42rem;
 }
+.shutdown
+{
+  margin-left:68rem;
+  align-content: right;
+}  
+
+.log {
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(104, 85, 224, 1);
+  }
+
+  button:hover {
+    color: white;
+    width: 100px;;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
+  }
+

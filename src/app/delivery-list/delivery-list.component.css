@@ -7,7 +7,7 @@
 }
 
 body{
-    background: linear-gradient(to left,rgb(253, 250, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
+    background: linear-gradient(to left,rgb(250, 252, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
     
 }
 .WEL
@@ -33,7 +33,7 @@ body{
 }
 
 .top-bar,.box{
-    background: white;
+    background-color: cadetblue;
 }
 
 .top-bar{
@@ -55,7 +55,7 @@ body{
 }
 
 .left-sidebar,.dashboard{
-    background: linear-gradient(to left,white,transparent,white,transparent);
+    background-color: white;
     margin: 20px 0px 0px 0px;
     padding:0px 0px 0px 22px;
 }
@@ -68,12 +68,12 @@ body{
     gap: 52px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    background: linear-gradient(to left,white,transparent,white,transparent);
+    background-color: white;
 }
 
 .dashboard{
     border:2px solid transparent;
-    box-shadow: .2px .2px 1px .2px gray;
+    background-color: white;
     height: 100;
     width: 90%;
     border-bottom-right-radius: 8px;
@@ -82,12 +82,12 @@ body{
 
 .left-sidebar h2{
     border-top-left-radius: 8px;
-    box-shadow: .2px .2px 1px .2px whitesmoke;
+    
     padding: 13px 2px 17px 22px;
     margin: 0px 0px 0px -22px;
     letter-spacing: -2px;
     border-radius: none;
-    background:white;
+    background-color:#0C7ECF;
 }
 
 .dashboard h2{
@@ -95,8 +95,8 @@ body{
     margin: 0px 0px 0px -21px;
     letter-spacing: 2px;
     border-radius: none;
-    background: linear-gradient(to left,transparent,rgb(241, 242, 255),transparent,rgb(249, 250, 255));
-    box-shadow: .2px .2px 2px .2px rgb(196, 201, 245);
+    
+    background-color: #0C7ECF;
 }
 
 .left-sidebar div{
@@ -107,6 +107,7 @@ body{
     box-shadow: .2px .2px 3px .2px rgb(218, 217, 217);
     background: linear-gradient(to left,white,transparent,white,transparent);
     border-radius: 2px;
+    
 }
 
 ion-icon{
@@ -233,13 +234,47 @@ input::placeholder{
 table, th, td {
     border: 2px solid black;
     border-collapse: collapse;
-    padding: 2rem;
+    padding: 1.5rem;
     
     height: 20%;
-    size: 2rem;
+    size: 10rem;
   }
+
+  th{
+    background-color: #019CE0;
+  }
+
+  td{
+
+    background-color: rgb(245, 247, 249);
+  }
+  
+  td:hover 
+  {
+    background-color:#C0C0C0;
+}
+
   .time
   {
       margin-top: 0.5rem;
       margin-left:42rem;
+  }
+
+  .shutdown
+  {
+    margin-left:68rem;
+    align-content: right;
+  }
+
+  .log {
+    color: rgb(104, 85, 224);
+    background-color: rgba(255, 255, 255, 1);
+    border: 3px solid rgba(104, 85, 224, 1);
+  }
+
+  button:hover {
+    color: white;
+    width: 100px;;
+    box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
+    background-color: rgba(104, 85, 224, 1);
   }

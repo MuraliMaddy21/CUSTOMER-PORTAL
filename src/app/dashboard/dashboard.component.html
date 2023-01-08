@@ -63,12 +63,18 @@
                     TIME:{{time}}
                 </div>
 
+                
+                <div class="shutdown">
+                    <button class="log"  (click)="shutdown()">LOGOUT👋</button>
+                </div>
+               
+
                 <div class="rightbar">
                     <br>
                     
                     <br>
                     
-                    <h4>CUSTOMER-ID:{{customerid}}</h4>
+                    <h4>CUSTOMER-ID:{{customerid | number}}</h4>
                     <h4>FIRST NAME:{{name}}</h4>
                     <h4>LAST NAME:{{name2}}</h4>
                     <h4>POSTCAL CODE:{{postcode}}</h4>

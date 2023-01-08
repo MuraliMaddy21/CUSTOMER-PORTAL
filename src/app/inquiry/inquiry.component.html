@@ -60,6 +60,12 @@
                     TIME:{{time}}
                 </div>
 
+                
+                <div class="shutdown">
+                    <button class="log"  (click)="shutdown()">LOGOUT👋</button>
+                </div>
+               
+
               
 
                 <div class="rightbar">
@@ -70,7 +76,7 @@
 
                     <table>
                         <th>DOCUMENT DATE</th>
-                        <TH> Sales Document</TH>
+                        <TH>Sales Document</TH>
                         <th>VALID FROM</th>
                         <th>VALID TO</th>
                         <th>Requested delivery date</th>
@@ -79,12 +85,12 @@
                         
 
                     <tr style="height:200px" *ngFor="let entries of this.items">
-                        <td><h4>{{entries.AUDAT}}</h4></td>
-                        <td><h4>{{entries.VBELN}}</h4></td>
+                        <td><h4>{{entries.AUDAT |  date: 'dd/MM/yyyy'}}</h4></td>
+                        <td><h4>{{entries.VBELN | number}}</h4></td>
 
-                        <td><h4>{{entries.GUEBG}}</h4></td>
-                        <td><h4>{{entries.GUEEN}}</h4></td>
-                        <td><h4>{{entries.VDATU}}</h4></td>
+                        <td><h4>{{entries.GUEBG |  date: 'dd/MM/yyyy'}}</h4></td>
+                        <td><h4>{{entries.GUEEN |  date: 'dd/MM/yyyy'}}</h4></td>
+                        <td><h4>{{entries.VDATU |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.AUTLF}}</h4></td>
 
                         

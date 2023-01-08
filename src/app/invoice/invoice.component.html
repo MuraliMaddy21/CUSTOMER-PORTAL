@@ -59,6 +59,12 @@
                 <div class="time">
                     TIME:{{time}}
                 </div>
+
+                
+                <div class="shutdown">
+                    <button class="log"  (click)="shutdown()">LOGOUT👋</button>
+                </div>
+               
               
 
                 <div class='rightbar'>
@@ -68,18 +74,21 @@
                     <table>
                         <th>SALES DOCUMENT</th>
                         <th>CREATED ON</th>
+                        <th>CREATED TIME</th>
                         <th>BILLING TYPE </th>
                         <th>CURRENCY </th>
                         
 
                     <tr style="height:200px" *ngFor="let entries of this.items">
-                        <td><h4>{{entries.VBELN}}</h4></td>
-                        <td><h4>{{entries.ERDAT}}</h4></td>
+                        <td><h4>{{entries.VBELN | number}}</h4></td>
+                        <td><h4>{{entries.ERDAT |  date: 'dd/MM/yyyy'}}</h4></td>
+                        <td><h4>{{entries.ERZET}}</h4></td>
                         <td><h4>{{entries.FKART}}</h4></td>
                         <td><h4>{{entries.WAERK}}</h4></td>
                         
                     </tr>
                 </table>
+
                             
                         
                  
