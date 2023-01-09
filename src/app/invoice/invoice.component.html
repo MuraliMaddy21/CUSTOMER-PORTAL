@@ -80,7 +80,7 @@
                         
 
                     <tr style="height:200px" *ngFor="let entries of this.items">
-                        <td><h4>{{entries.VBELN | number}}</h4></td>
+                        <td><h4>{{entries.VBELN | slice:2}}</h4></td>
                         <td><h4>{{entries.ERDAT |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.ERZET}}</h4></td>
                         <td><h4>{{entries.FKART}}</h4></td>
