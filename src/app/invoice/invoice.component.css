@@ -235,6 +235,7 @@ table, th, td {
     border: 2px solid black;
     border-collapse: collapse;
     padding: 1.5rem;
+    margin-left: 0.5rem;
     
     height: 20%;
     size: 10rem;

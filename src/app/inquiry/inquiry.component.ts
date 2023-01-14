@@ -13,6 +13,7 @@ export class InquiryComponent implements OnInit {
   result:any="";
   items:any="";
   time:any="";
+  filterdata:any="";
   constructor(private route:Router,private http:HttpClient) { }
 
   ngOnInit(): void {

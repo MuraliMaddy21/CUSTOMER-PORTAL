@@ -73,7 +73,9 @@
                     
                     <br>
 
-
+                    <input type="text" class="form-control" placeholder="Filter by Document Number" [(ngModel)]="filterdata" />
+                    <BR>
+                        <BR>
                     <table>
                         <th>DOCUMENT DATE</th>
                         <TH>Sales Document</TH>
@@ -84,10 +86,9 @@
                        
                         
 
-                    <tr style="height:200px" *ngFor="let entries of this.items">
+                    <tr style="height:200px" *ngFor="let entries of items | filter1:filterdata">
                         <td><h4>{{entries.AUDAT |  date: 'dd/MM/yyyy'}}</h4></td>
-                        <td><h4>{{entries.VBELN | number}}</h4></td>
-
+                        <td><h4>{{entries.VBELN |  number}}</h4></td>
                         <td><h4>{{entries.GUEBG |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.GUEEN |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.VDATU |  date: 'dd/MM/yyyy'}}</h4></td>

@@ -25,6 +25,9 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit(): void {
 
+    let date:Date= new Date()
+    this.time=date;
+
  
     this.http.get("http://localhost:3030/cpprofile",{responseType:'json'}).subscribe((response)=>
     {

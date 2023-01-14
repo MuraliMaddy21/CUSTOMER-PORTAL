@@ -14,6 +14,11 @@ import { InquiryComponent } from './inquiry/inquiry.component';
 import { SalesOrderComponent } from './sales-order/sales-order.component';
 import { InvoiceComponent } from './invoice/invoice.component';
 import { PaymentAgingComponent } from './payment-aging/payment-aging.component';
+import { FilterPipe } from './payment-aging/filter.pipe';
+import { FormsModule } from '@angular/forms';
+import { Filter1Pipe } from './inquiry/filter1.pipe';
+import { Filter2Pipe } from './sales-order/filter2.pipe';
+
 
 @NgModule({
   declarations: [
@@ -27,12 +32,18 @@ import { PaymentAgingComponent } from './payment-aging/payment-aging.component';
     InquiryComponent,
     SalesOrderComponent,
     InvoiceComponent,
-    PaymentAgingComponent
+    PaymentAgingComponent,
+    FilterPipe,
+    Filter1Pipe,
+    Filter2Pipe
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

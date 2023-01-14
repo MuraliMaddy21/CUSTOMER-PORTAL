@@ -71,7 +71,8 @@
                     <br>
                     
                     <br>
-                    
+                    <input type="text" class="form-control" placeholder="Filter by Document Number" [(ngModel)]="filterdata" />
+                   
                     <table>
                         <th>BILL DOCUMENT</th>
                         <th>POSTING DATE</th>
@@ -82,7 +83,7 @@
                         <TH>AMOUNT</TH>
                         
 
-                    <tr style="height:200px" *ngFor="let entries of this.items">
+                    <tr style="height:200px" *ngFor="let entries of items | filterpipe:filterdata">
                         <td><h4>{{entries.BILL_DOC | slice:2 }}</h4></td>
                         <td><h4>{{entries.PSTNG_DATE |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.CURRENCY}}</h4></td>

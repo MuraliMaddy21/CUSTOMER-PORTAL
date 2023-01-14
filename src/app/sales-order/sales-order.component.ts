@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 @Component({
   selector: 'app-sales-order',
@@ -12,6 +13,7 @@ export class SalesOrderComponent implements OnInit {
   items:any="";
   result:any="";
   time:any="";
+  filterdata:any="";
 
   constructor(private route:Router,private http:HttpClient) { }
 
