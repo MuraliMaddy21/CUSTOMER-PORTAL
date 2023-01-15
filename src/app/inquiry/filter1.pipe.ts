@@ -17,7 +17,7 @@ export class Filter1Pipe implements PipeTransform {
 
     for(const entries of value)
     {
-      if(entries['AUDAT'].includes(filterString))
+      if(entries['AUTLF'].includes(filterString))
       {
         items.push(entries);
       }
