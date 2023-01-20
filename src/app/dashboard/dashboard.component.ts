@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   result:any
   postcode:any=""
   time:any=""
+
   constructor(private route:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -49,6 +50,7 @@ export class DashboardComponent implements OnInit {
       this.telenum = this.result['Envelope']['Body']['ZFM_PROFILE_CP_MDResponse']['E_CUS_PROFILE'].TELENUM
       this.city = this.result['Envelope']['Body']['ZFM_PROFILE_CP_MDResponse']['E_CUS_PROFILE'].CITY
       this.postcode = this.result['Envelope']['Body']['ZFM_PROFILE_CP_MDResponse']['E_CUS_PROFILE'].PS_CODE
+      this.country = this.result['Envelope']['Body']['ZFM_PROFILE_CP_MDResponse']['E_CUS_PROFILE'].COUNTRY
 
   });
   }

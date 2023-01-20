@@ -7,6 +7,7 @@
 }
 
 body{
+   
     background: linear-gradient(to left,rgb(253, 278, 255),rgb(255, 246, 246),rgb(245, 251, 255),rgb(255, 244, 251));
     
 }
@@ -228,23 +229,8 @@ input::placeholder{
     letter-spacing: 1px;
 }
 
-.rightbar{
-    border: solid;
-    border-width: 0.5rem;
-    border-color:black;
-    margin-top:1rem;
-    
-}
 
-.rightbar h4{
-    padding-left: 0.5rem;
-    margin-top: 1rem;
-    padding: 0.3%
-}
 
-.rightbar h4:hover{
-    background-color: silver; 
-}
 
 .time
 {
@@ -268,6 +254,18 @@ input::placeholder{
     width: 100px;;
     box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
     background-color: rgba(104, 85, 224, 1);
+  }
+
+  table, th, td {
+    border: 1px solid black;
+  }
+  
+  th, td {
+    padding: 11px;
+  }
+
+  .rightbar  td:hover{
+    background-color: gold;
   }
 
   

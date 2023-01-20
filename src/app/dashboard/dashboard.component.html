@@ -71,16 +71,45 @@
 
                 <div class="rightbar">
                   
-                    
-                    <h4>CUSTOMER-ID:{{customerid | number}}</h4>
-                    <h4>FIRST NAME:{{name}}</h4>
-                    <h4>LAST NAME:{{name2}}</h4>
-                    <h4>POSTCAL CODE:{{postcode}}</h4>
-                    <h4>STREET:{{street}}</h4>
-                    <H4>CITY:{{city}} </H4>
-                    <H4>STATE:{{state | slice : 1}}</H4>
-                    <H4>COUNTRY:{{country}}</H4>
-                    <H4>TELEPHONE NUMBER:{{telenum}}</H4>
+                   <table>
+                    <tr>
+                        <td>CUSTOMERID</td>
+                        <td>{{customerid | number}}</td>
+                    </tr>
+                    <tr>
+                        <td>FIRST NAME</td>
+                        <td>{{name}}</td>
+                    </tr>
+                    <tr>
+                        <td>LAST NAME</td>
+                        <td>{{name2}}</td>
+                    </tr>
+                    <tr>
+                        <td>STREET</td>
+                        <td>{{street}}</td>
+                    </tr>
+                    <tr>
+                        <td>CITY</td>
+                        <td>{{city}}</td>
+                    </tr>
+                    <tr>
+                        <td>STATE</td>
+                        <td>{{state | number}}</td>
+                    </tr>
+                    <tr>
+                        <td>POSTAL CODE</td>
+                        <td>{{postcode }}</td>
+                    </tr>
+                    <tr>
+                        <td>TELEPHONE NUMBER</td>
+                        <td>{{telenum}}</td>
+                    </tr>
+                    <tr>
+                        <td>COUNTRY</td>
+                        <td>{{country}}</td>
+                    </tr>
+                   </table>
+                
                 </div>
 
 
