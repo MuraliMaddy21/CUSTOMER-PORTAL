@@ -18,7 +18,10 @@ import { FilterPipe } from './payment-aging/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { Filter1Pipe } from './inquiry/filter1.pipe';
 import { Filter2Pipe } from './sales-order/filter2.pipe';
+import { Filter3Pipe } from './invoice/filter3.pipe';
+import { Filter4Pipe } from './delivery-list/filter4.pipe';
 import {MatCardModule} from '@angular/material/card';
+
 
 
 
@@ -37,7 +40,10 @@ import {MatCardModule} from '@angular/material/card';
     PaymentAgingComponent,
     FilterPipe,
     Filter1Pipe,
-    Filter2Pipe
+    Filter2Pipe,
+    Filter3Pipe,
+    Filter4Pipe
+    
 
   ],
   imports: [

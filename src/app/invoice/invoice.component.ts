@@ -12,6 +12,7 @@ export class InvoiceComponent implements OnInit {
   result:any;
   items:any;
   time:any="";
+  filterdata:any=""
 
   constructor(private http:HttpClient,private route:Router) {
    }

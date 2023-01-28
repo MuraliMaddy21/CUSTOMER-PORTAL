@@ -13,7 +13,8 @@ export class DeliveryListComponent implements OnInit {
 
   result:any;
   items:any;
-time:any="";
+  filterdata:any=""
+  time:any="";
   constructor(private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
