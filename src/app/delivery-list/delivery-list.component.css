@@ -91,7 +91,7 @@ body{
 }
 
 .dashboard h2{
-    padding: 17px 2px 17px 25px;
+    padding: 12.5px 0px 17px 25px;
     margin: 0px 0px 0px -21px;
     letter-spacing: 2px;
     border-radius: none;
@@ -257,7 +257,7 @@ table, th, td {
   .time
   {
       margin-top: 0.5rem;
-      margin-left:42rem;
+      margin-left:40rem;
   }
 
   .shutdown
@@ -270,6 +270,8 @@ table, th, td {
     color: rgb(104, 85, 224);
     background-color: rgba(255, 255, 255, 1);
     border: 3px solid rgba(104, 85, 224, 1);
+    margin-top: 5px;
+    align-items: right;
   }
 
   button:hover {
@@ -278,7 +280,14 @@ table, th, td {
     box-shadow: 0 0 20px rgba(104, 85, 224, 0.6);
     background-color: rgba(104, 85, 224, 1);
   }
-  
+
   td{
     text-align: center;
   }
+
+  .matcard
+  {
+    background-color:#C0C0C0;
+    
+  }
+

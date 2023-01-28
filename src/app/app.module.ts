@@ -18,6 +18,8 @@ import { FilterPipe } from './payment-aging/filter.pipe';
 import { FormsModule } from '@angular/forms';
 import { Filter1Pipe } from './inquiry/filter1.pipe';
 import { Filter2Pipe } from './sales-order/filter2.pipe';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @NgModule({
@@ -43,6 +45,7 @@ import { Filter2Pipe } from './sales-order/filter2.pipe';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatCardModule
     
   ],
   providers: [],

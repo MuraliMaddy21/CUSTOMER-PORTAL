@@ -14,10 +14,11 @@ export class Filter2Pipe implements PipeTransform {
     }
 
     const items=[];
+    filterString=filterString.toUpperCase();
 
     for(const entries of value)
     {
-      if(entries['DOC_STATUS'].includes(filterString))
+      if(entries['DOC_STATUS'].toUpperCase().includes(filterString))
       {
         items.push(entries);
       }
