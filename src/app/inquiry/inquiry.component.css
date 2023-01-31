@@ -40,9 +40,9 @@ body{
     margin: -1px 0px 0px -22px;
     width: 106.9%;
     height: 5rem;
-    background: white;
+   
     box-shadow: .2px .2px 10px .2px white;
-    background: linear-gradient(to left,rgb(253, 254, 255),rgb(255, 255, 255));
+    
     border-top-right-radius:8px ;
 }
 
@@ -55,7 +55,7 @@ body{
 }
 
 .left-sidebar,.dashboard{
-    background-color: white;
+   
     margin: 20px 0px 0px 0px;
     padding:0px 0px 0px 22px;
 }
@@ -68,12 +68,13 @@ body{
     gap: 52px;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    background-color: white;
+    background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=996&t=st=1675172336~exp=1675172936~hmac=a1ad8880cfc75fd0af69ab8e46b29021dc7fa6ab92a3c27b5e9d6efd22e1fbe6);
+    
 }
 
 .dashboard{
     border:2px solid transparent;
-    background-color: white;
+    
     height: 100;
     width: 90%;
     border-bottom-right-radius: 8px;
@@ -105,7 +106,6 @@ body{
     padding:6px 12px 10px 31px;
     margin: -20px 0px 0px -9px;
     box-shadow: .2px .2px 3px .2px rgb(218, 217, 217);
-    background: linear-gradient(to left,white,transparent,white,transparent);
     border-radius: 2px;
     
 }
@@ -287,7 +287,17 @@ table, th, td {
 
   .matcard
   {
-    background-color:#C0C0C0;
+    background-color:#019CE0
     
   }
+
+  .dashboard,.shutdown,.time,.rightbar{
+    background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg?w=1380&t=st=1675173247~exp=1675173847~hmac=9cc566e9a33efea7b0c4fb8ba7fa05d48c17aed75efcc194db84cdaf3f6fe0d1);
+    background-size: cover;
+    background-color: #CEC8EF;
+
+  }
+
+
+
 

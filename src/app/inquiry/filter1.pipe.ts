@@ -12,12 +12,13 @@ export class Filter1Pipe implements PipeTransform {
     {
       return value;
     }
-
+    
+    filterString=filterString.toUpperCase();
     const items=[];
 
     for(const entries of value)
     {
-      if(entries['AUTLF'].includes(filterString))
+      if(entries['AUTLF'].toUpperCase().includes(filterString))
       {
         items.push(entries);
       }

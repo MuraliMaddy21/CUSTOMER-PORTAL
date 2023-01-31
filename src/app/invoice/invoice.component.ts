@@ -55,6 +55,11 @@ export class InvoiceComponent implements OnInit {
     this.route.navigate([""]);
   }
 
+  print()
+  {
+    window.print();
+  }
+
 }
 
 

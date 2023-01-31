@@ -21,6 +21,8 @@ import { Filter2Pipe } from './sales-order/filter2.pipe';
 import { Filter3Pipe } from './invoice/filter3.pipe';
 import { Filter4Pipe } from './delivery-list/filter4.pipe';
 import {MatCardModule} from '@angular/material/card';
+import {MatIconModule} from '@angular/material/icon';
+
 
 
 
@@ -51,7 +53,8 @@ import {MatCardModule} from '@angular/material/card';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    MatCardModule
+    MatCardModule,
+    MatIconModule
     
   ],
   providers: [],
