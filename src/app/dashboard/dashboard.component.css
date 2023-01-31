@@ -39,9 +39,6 @@ body{
     
 }
 
-.top-bar,.box{
-    
-}
 
 .top-bar{
     margin: -1px 0px 0px -22px;
@@ -289,10 +286,16 @@ input::placeholder{
 
   }
 
-  .dropdown-content
+  .dropdown-content button
   {
     margin-top: 41px;
     margin-right: 5px;
-    background-color: #019CE0;
+    background-color: #0C7ECF;
   }
-  
+   
+  .dropdown-content button:hover
+  {
+    background-color: #0C7ECF;
+    transform:scale(1.2);
+   
+  }

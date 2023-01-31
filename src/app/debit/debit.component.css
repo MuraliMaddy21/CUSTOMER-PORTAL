@@ -303,6 +303,27 @@ table, th, td {
 
   }
 
+  
+  .dashboard,.shutdown,.time,.rightbar{
+    background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg?w=1380&t=st=1675173247~exp=1675173847~hmac=9cc566e9a33efea7b0c4fb8ba7fa05d48c17aed75efcc194db84cdaf3f6fe0d1);
+    background-size: cover;
+
+  }
+
+  .dropdown-content button
+  {
+    margin-top: 38px;
+    margin-right: 5px;
+    background-color: #0C7ECF;
+  }
+   
+  .dropdown-content button:hover
+  {
+    background-color: #0C7ECF;
+    transform:scale(1.2);
+   
+  }
+
 
 
 
