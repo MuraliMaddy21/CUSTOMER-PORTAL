@@ -323,7 +323,9 @@ table, th, td {
     transform:scale(1.2);
    
   }
-
+  .rightbar button{
+    margin-left: 10px;
+  }
 
 
 
