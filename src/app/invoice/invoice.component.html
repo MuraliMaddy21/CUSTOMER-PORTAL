@@ -75,9 +75,12 @@
                     <br>
                     
                     <button (click)="print()">PRINT INVOICE</button>
+                    <br><br>
+                    <button (click)="exportexcel()">EXPORT TO EXCEL</button>
+
                     <BR>
                         <BR>
-                    <table>
+                    <table id ="excel-table">
                         <th>SALES DOCUMENT</th>
                         <th>CREATED ON</th>
                         <th>CREATED TIME</th>
