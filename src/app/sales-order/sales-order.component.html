@@ -93,7 +93,7 @@
                     <tr style="height:200px" *ngFor="let entries of this.items | filter2:filterdata">
                         <td><h4>{{entries.SD_DOC | number}}</h4></td>
                         <td><h4>{{entries.CREATION_DATE |  date: 'dd/MM/yyyy'}}</h4></td>
-                        <td><h4>{{entries.NET_PRICE | number}}</h4></td>
+                        <td><h4>{{entries.NET_PRICE | number}}€</h4></td>
                         <td><h4>{{entries.REQ_DATE  |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.VALID_FROM |  date: 'dd/MM/yyyy'}}</h4></td>
                         <td><h4>{{entries.VALID_TO |  date: 'dd/MM/yyyy'}}</h4></td>

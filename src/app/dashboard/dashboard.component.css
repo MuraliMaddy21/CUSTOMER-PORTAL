@@ -267,7 +267,7 @@ input::placeholder{
   }
   
   th, td {
-    padding: 11px;
+    padding: 8px;
   }
 
   .rightbar  td:hover{
@@ -299,3 +299,38 @@ input::placeholder{
     transform:scale(1.2);
    
   }
+
+  .avatar {
+    
+    border-radius: 50%;
+
+    
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    
+    height: 6rem;
+    width: 6rem;
+    margin-left: 0.021px;
+    
+}
+
+.avatar__image {
+    /* Size */
+    height: 90%;
+    width: 90%;
+    border-radius: 0%;
+}
+
+.avatar__image:hover {
+    /* Size */
+    height: 400%;
+    width:200%;
+}
+
+.matcard
+{
+    align-items: right;
+    justify-content: rig;
+}
