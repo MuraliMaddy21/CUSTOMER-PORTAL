@@ -14,6 +14,7 @@ export class InvoiceComponent implements OnInit {
   time: any = "";
   filterdata: any = ""
   fileName= 'ExcelSheet.xlsx';
+  spinner:any;
 
   constructor(private http: HttpClient, private route: Router) {
   }
@@ -33,6 +34,9 @@ export class InvoiceComponent implements OnInit {
     })
 
     this.http.get('http://localhost:3030/cpinvoice', { responseType: 'json' }).subscribe((response) => {
+      if (Response) {
+        this.hideloader();
+    }
       console.log(response)
       this.result = response
       this.items = this.result['Envelope']['Body']['ZFM_INVOICE_CP_MDResponse']['IT_INVOICE']['item']
@@ -63,6 +67,13 @@ export class InvoiceComponent implements OnInit {
      const wb: XLSX.WorkBook = XLSX.utils.book_new(); 
      XLSX.utils.book_append_sheet(wb, ws, 'Sheet1'); 
      XLSX.writeFile(wb, this.fileName); }
+
+     hideloader()
+     {
+       this.spinner=document.getElementById('loading');
+       this.spinner .style.display = 'none';
+       
+     }
 
 }
 

@@ -14,6 +14,7 @@ export class InquiryComponent implements OnInit {
   items:any="";
   time:any="";
   filterdata:any="";
+  spinner:any;
   constructor(private route:Router,private http:HttpClient) { }
 
   ngOnInit(): void {
@@ -34,6 +35,9 @@ export class InquiryComponent implements OnInit {
 
     this.http.get('http://localhost:3030/cpinquiry',{responseType:'json'}).subscribe((response)=>
     {
+      if (Response) {
+        this.hideloader();
+    }
      console.log(response)
      this.result=response
      this.items=this.result['Envelope']['Body']['ZFM_INQUIRY_CP_MDResponse']['ZSD_INQ_T']['item']
@@ -52,6 +56,12 @@ export class InquiryComponent implements OnInit {
     });
     
     this.route.navigate([""]);
+  }
+  hideloader()
+  {
+    this.spinner=document.getElementById('loading');
+    this.spinner .style.display = 'none';
+    
   }
 
 }

@@ -14,6 +14,7 @@ export class SalesOrderComponent implements OnInit {
   result:any="";
   time:any="";
   filterdata:any="";
+  spinner:any;
 
   constructor(private route:Router,private http:HttpClient) { }
 
@@ -35,6 +36,9 @@ export class SalesOrderComponent implements OnInit {
 
     this.http.get('http://localhost:3030/cpsalord',{responseType:'json'}).subscribe((response)=>
     {
+      if (Response) {
+        this.hideloader();
+    }
      console.log(response)
      this.result=response
      this.items=this.result['Envelope']['Body']['ZFM_SALESORDER_CP_MDResponse']['E_SALESORDER']['item']
@@ -52,6 +56,12 @@ export class SalesOrderComponent implements OnInit {
     });
     
     this.route.navigate([""]);
+  }
+  hideloader()
+  {
+    this.spinner=document.getElementById('loading');
+    this.spinner .style.display = 'none';
+    
   }
 
 }

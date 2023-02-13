@@ -79,6 +79,11 @@
 
                     <input type="text" class="form-control" placeholder="Filter by Delivery Status" [(ngModel)]="filterdata" />
                     <BR>
+                        <div class="d-flex justify-content-center">
+                            <div class="spinner-border" role="status" >
+                              <span class="sr-only" id="loading"></span>
+                            </div>
+                          </div>
                         <BR>
                     <table>
                         <th>Document Date</th>

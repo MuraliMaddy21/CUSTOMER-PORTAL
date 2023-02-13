@@ -15,6 +15,7 @@ export class DeliveryListComponent implements OnInit {
   items:any;
   filterdata:any=""
   time:any="";
+  spinner:any;
   constructor(private http:HttpClient,private route:Router) { }
 
   ngOnInit(): void {
@@ -51,6 +52,12 @@ shutdown()
     });
     
     this.route.navigate([""]);
+  }
+  hideloader()
+  {
+    this.spinner=document.getElementById('loading');
+    this.spinner .style.display = 'none';
+    
   }
 
 }

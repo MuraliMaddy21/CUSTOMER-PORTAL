@@ -21,6 +21,7 @@ export class DashboardComponent implements OnInit {
   result:any
   postcode:any=""
   time:any=""
+  spinner:any;
 
   constructor(private route:Router,private http:HttpClient) { }
 
@@ -32,6 +33,10 @@ export class DashboardComponent implements OnInit {
  
     this.http.get("http://localhost:3030/cpprofile",{responseType:'json'}).subscribe((response)=>
     {
+      if (Response) {
+        this.hideloader();
+    }
+
       console.log(response)
       this.result = response
       this.customerid = this.result['Envelope']['Body']['ZFM_PROFILE_CP_MDResponse']['E_CUS_PROFILE'].KUNNR
@@ -63,5 +68,12 @@ export class DashboardComponent implements OnInit {
     
     this.route.navigate([""]);
   }
+  hideloader()
+  {
+    this.spinner=document.getElementById('loading');
+    this.spinner .style.display = 'none';
+    
+  }
+
 
 }
