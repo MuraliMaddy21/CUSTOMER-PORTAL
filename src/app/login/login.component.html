@@ -36,9 +36,13 @@
                 <label>Password</label>
                 <span></span>
             </div>
-            <input type="checkbox" (click)="myFunction()" >Show Password
-           
-
+            <div class="text-field">
+                <input type="number" [value]="gotp" name="otp" (input)="gotp=($any($event.target).value)"  required>
+                <span></span>
+                <label>OTP</label>
+            </div>
+            <div class="button">
+            <button class="log"  (click)="getOtp()" >Send OTP</button></div>
         </form>
        
         <div class="container">

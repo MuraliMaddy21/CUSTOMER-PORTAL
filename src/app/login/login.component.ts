@@ -15,7 +15,9 @@ export class LoginComponent implements OnInit {
   result:any
   status:any
  x:any
-
+lotp:any="";
+gotp:any="";
+json2:any;
   constructor(private route:Router,private http:HttpClient) { }
 
   ngOnInit(): void
@@ -38,6 +40,10 @@ export class LoginComponent implements OnInit {
   {
     window.alert("Please enter Password")
   }
+  else if(this.gotp=='')
+  {
+    window.alert("Please enter OTP")
+  }
   else
   {
 
@@ -57,7 +63,7 @@ export class LoginComponent implements OnInit {
       console.log(this.result)
       //console.log(this.result['Envelope']['Body']['ZFM_LOGIN_VP_MD.Response']['E_MESSAGE'].toString())
       this.status=this.result['Envelope']['Body']['ZFM_LOGIN_CP_MDResponse']['E_MESSAGE']
-      if(this.status == 'S')
+      if(this.status == 'S' && this.gotp==this.lotp)
       {
          window.alert("Login Successful")
         this.route.navigate(["/dashboard"]);
@@ -84,6 +90,31 @@ export class LoginComponent implements OnInit {
     } else {
       this.x.type = "password";
     }
+  }
+
+  getOtp()
+  {
+    this.lotp = 0;
+    var digits = '0123456789';
+  
+    for(let i=0;i<6;i++)
+    {
+      this.lotp += digits[Math.floor(Math.random()*10)]
+    }
+    console.log(this.lotp);
+    window.alert("OTP SENT SUCCESSFULLY")
+    this.json2=
+    {
+      "otp":this.lotp
+    }
+    this.http.post('http://localhost:3030/otp',this.json2,{responseType:'json'}).subscribe((response)=>
+   {
+      this.result = response
+      console.log(this.result)
+   })
+
+    return this.lotp
+
   }
 }
 
