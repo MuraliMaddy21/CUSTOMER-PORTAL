@@ -70,10 +70,27 @@ json2:any;
       }
       else
       {
+        if(this.status=='E' && this.gotp!=this.lotp)
+        {
+          window.alert("You Have Entered Incorrect OTP and Credentials!Kindly Check them")
+        }
+        else if(this.gotp!=this.lotp)
+        {
+          window.alert("You Have Entered Incorrect OTP!Kindly Check the Otp")
+        }
+        else
+        {
         window.alert("Incorrect Credentials!Please Check")
+        }
       }
 
-   }))
+   }),
+   (error:any)=>
+   {
+    this.result = error;
+     window.alert("Error Occured!Kindly ensure that the backend is running")
+
+   })
   }
    
 
