@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
 lotp:any="";
 gotp:any="";
 json2:any;
+
   constructor(private route:Router,private http:HttpClient) { }
 
   ngOnInit(): void
@@ -30,18 +31,35 @@ json2:any;
   {
   if(this.customerid=='' && this.password=="")
   {
+    let audio= new Audio("");
+    audio.src="/assets/windows-error-sound-effect-35894.mp3";
+    audio.load();
+    audio.play();
     window.alert("Please enter CUSTOMER-ID and Password")
+
   }
   else if(this.customerid=='')
   {
+    let audio= new Audio("");
+    audio.src="/assets/windows-error-sound-effect-35894.mp3";
+    audio.load();
+    audio.play();
     window.alert("Please enter Customer-Id")
   }
   else if(this.password=='')
   {
+    let audio= new Audio("");
+    audio.src="/assets/windows-error-sound-effect-35894.mp3";
+    audio.load();
+    audio.play();
     window.alert("Please enter Password")
   }
   else if(this.gotp=='')
   {
+    let audio= new Audio("");
+    audio.src="/assets/windows-error-sound-effect-35894.mp3";
+    audio.load();
+    audio.play();
     window.alert("Please enter OTP")
   }
   else
@@ -66,20 +84,36 @@ json2:any;
       if(this.status == 'S' && this.gotp==this.lotp)
       {
          window.alert("Login Successful")
+         let audio= new Audio("");
+         audio.src="/assets/page-flip-02.mp3";
+         audio.load();
+         audio.play();
         this.route.navigate(["/dashboard"]);
       }
       else
       {
         if(this.status=='E' && this.gotp!=this.lotp)
         {
+          let audio= new Audio("");
+         audio.src="/assets/windows-error-sound-effect-35894.mp3";
+         audio.load();
+         audio.play();
           window.alert("You Have Entered Incorrect OTP and Credentials!Kindly Check them")
         }
         else if(this.gotp!=this.lotp)
         {
+          let audio= new Audio("");
+         audio.src="/assets/windows-error-sound-effect-35894.mp3";
+         audio.load();
+         audio.play();
           window.alert("You Have Entered Incorrect OTP!Kindly Check the Otp")
         }
         else
         {
+          let audio= new Audio("");
+         audio.src="/assets/windows-error-sound-effect-35894.mp3";
+         audio.load();
+         audio.play();
         window.alert("Incorrect Credentials!Please Check")
         }
       }
@@ -124,10 +158,15 @@ json2:any;
     {
       "otp":this.lotp
     }
-    this.http.post('http://localhost:3030/otp',this.json2,{responseType:'json'}).subscribe((response)=>
+    this.http.post('http://localhost:3030/otp',this.json2,{responseType:'json'}).subscribe((response=>
    {
       this.result = response
       console.log(this.result)
+   }),
+   (error:any)=>
+   {
+    this.result = error;
+    window.alert("Error Occured!Kindly ensure that the backend is running")
    })
 
     return this.lotp
