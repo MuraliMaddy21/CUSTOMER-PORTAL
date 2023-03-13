@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Route,Router } from '@angular/router';
 import { HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { catchError } from 'rxjs/operators';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -158,12 +160,20 @@ json2:any;
     {
       "otp":this.lotp
     }
-    this.http.post('http://localhost:3030/otp',this.json2,{responseType:'json'}).subscribe((response)=>
-   {
-      this.result = response
-      console.log(this.result)
-   })
-   
+
+this.http.post('http://localhost:3030/otp', this.json2, { responseType: 'json' })
+  .pipe(
+    catchError(error => {
+      console.log('Error Occured in the Backend!Kindly check if the backend is running', error);
+      return throwError(error);
+    })
+  )
+  .subscribe(
+    response => {
+      this.result = response;
+      console.log(this.result);
+    }
+  );
 
     return this.lotp
 
