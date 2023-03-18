@@ -77,7 +77,13 @@ json2:any;
  
   
    console.log(this.json)
-   this.http.post('http://localhost:3030/cplogin',this.json,{responseType:'json'}).subscribe((response=>
+   this.http.post('http://localhost:3030/cplogin',this.json,{responseType:'json'}).pipe(
+    catchError(error => {
+      console.error(error);
+      window.alert("An error occurred while processing your request.Kindly check if the backend is running.");
+      return []; // return an empty array to continue the observable stream
+    })
+  ).subscribe((response)=>
    {
       this.result = response
       console.log(this.result)
@@ -119,21 +125,11 @@ json2:any;
         window.alert("Incorrect Credentials!Please Check")
         }
       }
-
-   }),
-   (error:HttpErrorResponse)=>
-   {
-    this.result = error;
-     window.alert("Error Occured!Kindly ensure that the backend is running")
-
-   })
+    })
   }
-   
+}
 
-   
-   
 
-  }
 
   myFunction()
   {
